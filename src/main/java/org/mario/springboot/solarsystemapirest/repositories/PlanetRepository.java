@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface PlanetRepository {
 
-    List<Planet> findAll();
-    Planet findById();
+    List<Planet> getPlanets();
+    Planet findPlanetById(Long id);
 
 }

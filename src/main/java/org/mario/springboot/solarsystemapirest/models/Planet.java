@@ -2,6 +2,9 @@ package org.mario.springboot.solarsystemapirest.models;
 
 public class Planet {
 
+
+    //All units in relation with Earth.
+
     private Long id;
     private String name;
     private double mass;
