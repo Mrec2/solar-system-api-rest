@@ -12,7 +12,7 @@ import java.util.List;
 public class PlanetServiceImpl implements PlanetService{
 
     @Autowired
-    @Qualifier("exoplanetsSystem")
+//    @Qualifier("exoplanetsSystem")
     PlanetRepository repository;
 
     @Override
