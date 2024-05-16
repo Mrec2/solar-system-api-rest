@@ -1,10 +1,14 @@
 package org.mario.springboot.solarsystemapirest.repositories;
 
 import org.mario.springboot.solarsystemapirest.models.Planet;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
 import java.util.List;
 
+@Primary
+@Repository("planetsSystem")
 public class PlanetRepositoryImpl implements PlanetRepository{
 
     private List<Planet> data;

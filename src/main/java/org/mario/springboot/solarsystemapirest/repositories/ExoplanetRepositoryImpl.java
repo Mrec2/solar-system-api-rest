@@ -1,10 +1,12 @@
 package org.mario.springboot.solarsystemapirest.repositories;
 
 import org.mario.springboot.solarsystemapirest.models.Planet;
+import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
 import java.util.List;
 
+@Repository("exoplanetsSystem")
 public class ExoplanetRepositoryImpl implements PlanetRepository {
 
     private List<Planet> data;
@@ -32,7 +34,7 @@ public class ExoplanetRepositoryImpl implements PlanetRepository {
 
     @Override
     public Planet findPlanetById(Long id) {
-        return null;
+        return data.stream().filter(p-> p.getId().equals(id)).findFirst().orElse(null);
     }
 
 }
