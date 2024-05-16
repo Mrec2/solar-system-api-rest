@@ -3,6 +3,7 @@ package org.mario.springboot.solarsystemapirest.services;
 import org.mario.springboot.solarsystemapirest.models.Planet;
 import org.mario.springboot.solarsystemapirest.repositories.PlanetRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
 public class PlanetServiceImpl implements PlanetService{
 
     @Autowired
+    @Qualifier("exoplanetsSystem")
     PlanetRepository repository;
 
     @Override
